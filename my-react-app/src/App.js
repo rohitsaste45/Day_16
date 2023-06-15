@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 
 function App(){
@@ -12,30 +13,23 @@ function App(){
 }
 
 function ListDemo(){
-  let data ="Hello Universe...";
-  let list = ["","",""]
+  let [list,setList] = useState(["Pune"]);
 
-  let list1 =[];
-  for(let i =0;i<10;i++){
-    list1.push("");
-  }
-
+  let addItemAction = () =>{
+    let newList =[...list, "Mumbai"];
+    console.log(newList);
+    setList(newList);
+  };
   return (
     <>
-      <h1>{data}</h1>
-      {list1.map((item) =>(
-        <div>
-        <h1>Hello universe...</h1>
-      </div>
-      ))}
-      <hr />
-      {list1.map((item)=> (
-        <div>
-        <h1>Hello Rohit...</h1>
-      </div>
+
+    <input type="button" value="Add New Item" onClick={addItemAction} />
+      {list.map((item) => (
+        <h1>Hello {item}</h1>
       ))}
     </>
-  );
+  )
+
 }
 
 export default App;
