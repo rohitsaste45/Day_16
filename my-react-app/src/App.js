@@ -17,12 +17,17 @@ function ListDemo(){
 
   return (
     <>
-      <h1>{data}</h1>
-      {list.forEach((item) => item)}
+      {list.map((item) =>(
+        <>
+          <h1>Hello World</h1>
+        </>
+      ))}
+
+      {list.map((item)=> "hello" +item)}
 
       {list.map((item) => item)}
     </>
-  )
+  );
 }
 
 export default App;
