@@ -32,22 +32,25 @@ function ListDemo() {
        ref={inputRef}
        placeholder="Enter User Input..." />
     <input type="button" value="Add New item" onClick={addItemAction} />
+    
     {list.map((item) => (
-      <div>
-        <h1>{item}</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente veniam ratione quisquam perspiciatis. Voluptatem sequi libero possimus sunt adipisci esse illo obcaecati, repellendus soluta magni mollitia suscipit ipsum tempore fuga.
-        </p>
-        <div>
-        <input type="button" value="&#128077;" />
-        <input type="button" value="&#128078;" />
-        </div>
-      </div>
-      
+      <MessageDemo message={item} />
     ))}
 
   </>
  );
 }
 
+function MessageDemo({message}){
+  return (
+    <>
+      <h1> Hello {message}</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est rem a odio consequatur necessitatibus fugiat quo aut dicta nemo, saepe voluptate cupiditate numquam doloribus enim, accusantium vel temporibus ipsum velit?</p>
+      <div>
+      <input type="button" value="&#128077;" />
+        <input type="button" value="&#128078;" />
+      </div>
+    </>
+  )
+}
 export default App;
