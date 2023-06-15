@@ -33,7 +33,17 @@ function ListDemo() {
        placeholder="Enter User Input..." />
     <input type="button" value="Add New item" onClick={addItemAction} />
     {list.map((item) => (
-      <h1>{item}</h1>
+      <div>
+        <h1>{item}</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente veniam ratione quisquam perspiciatis. Voluptatem sequi libero possimus sunt adipisci esse illo obcaecati, repellendus soluta magni mollitia suscipit ipsum tempore fuga.
+        </p>
+        <div>
+        <input type="button" value="&#128077;" />
+        <input type="button" value="&#128078;" />
+        </div>
+      </div>
+      
     ))}
 
   </>
